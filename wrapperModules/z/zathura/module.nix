@@ -29,7 +29,12 @@ in
         ]);
       default = { };
       internal = true;
-      apply = x: if x != { } then lib.warn "nix-wrapper-modules zathura: 'options' has been renamed to 'settings'" else x;
+      apply =
+        x:
+        if x != { } then
+          lib.warn "nix-wrapper-modules zathura: 'options' has been renamed to 'settings'"
+        else
+          x;
     };
     settings = lib.mkOption {
       type =
