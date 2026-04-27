@@ -188,9 +188,6 @@
 
       extraContent = mkOption {
         type = types.lines;
-        description = ''
-          Deprecated, please use 'extraConfig' instead
-        '';
         default = "";
         internal = true;
       };
