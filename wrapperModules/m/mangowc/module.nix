@@ -175,9 +175,9 @@
           The config file that mango will set as its primary config file.
           By default, this file will be generated from whatever the other options are set to.
 
-          Note: If `configFile.path` is set, it will be used INSTEAD of the generated configuration. The generated file will still be created, however, and you can source it. Add your path to the `sourcedFiles` option if you want the generated config to still apply.
+          Note: If `configFile.path` is set, it will be used INSTEAD of the generated configuration. The generated file will still be created, however, and you can source it. If you don't want the generated config to get overwritten, add the path you want to use to the `sourcedFiles` option and don't set `configFile.path`.
 
-          If `configFile.content` is set, it will replace the contents of the generated config file entirely. Use the `extraConfig` option if you want the generated config to still apply.
+          If `configFile.content` is set, it will replace the contents of the generated config file entirely. If you don't want the generated config to get overwritten, set the `extraConfig` option and don't set `configFile.content`.
         '';
         example = literalExpression ''
           {
